@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Reviews</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- jQuery Mobile CSS and JS -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style>
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      padding: 15px;
+    }
+
+    .movie-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      box-sizing: border-box;
+      transition: transform 0.2s;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.02);
+    }
+
+    .movie-poster {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .movie-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #00796B;
+      margin-top: 8px;
+    }
+
+    .movie-genre {
+      font-style: italic;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .movie-summary,
+    .movie-review {
+      font-size: 13px;
+      margin-top: 5px;
+      color: #333;
+    }
+
+    @media (max-width: 600px) {
+      .movie-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    h1 {
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+
+<div data-role="page" id="home">
+  <div data-role="header" data-theme="b">
+    <h1>🎬 Movie Reviews</h1>
+  </div>
+
+  <div data-role="content">
+    <div class="movie-grid">
+
+      <!-- Movie 1 -->
+      <div class="movie-card">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/I/81eB+7+CkUL._AC_SY679_.jpg" alt="Inception Poster">
+        <div class="movie-title">Inception</div>
+        <div class="movie-genre">Genre: Sci-Fi, Action</div>
+        <div class="movie-summary">A skilled thief enters people’s dreams to steal secrets and plant ideas.</div>
+        <div class="movie-review"><strong>Review:</strong> Mind-bending visuals and a gripping plot. Nolan’s masterpiece.</div>
+      </div>
+
+      <!-- Movie 2 -->
+      <div class="movie-card">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg" alt="Shawshank Redemption Poster">
+        <div class="movie-title">Shawshank Redemption</div>
+        <div class="movie-genre">Genre: Drama</div>
+        <div class="movie-summary">Wrongly imprisoned, a man finds hope and friendship behind bars.</div>
+        <div class="movie-review"><strong>Review:</strong> Powerful and inspirational. A timeless classic.</div>
+      </div>
+
+      <!-- Movie 3 -->
+      <div class="movie-card">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/I/81eB+7+CkUL._AC_SY679_.jpg" alt="Interstellar Poster">
+        <div class="movie-title">Interstellar</div>
+        <div class="movie-genre">Genre: Sci-Fi, Adventure</div>
+        <div class="movie-summary">A team travels through a wormhole in search of a new home for humanity.</div>
+        <div class="movie-review"><strong>Review:</strong> Visually stunning and emotionally deep. Thought-provoking sci-fi.</div>
+      </div>
+
+      <!-- Movie 4 -->
+      <div class="movie-card">
+        <img class="movie-poster" src="https://m.media-amazon.com/images/I/81eB+7+CkUL._AC_SY679_.jpg" alt="The Dark Knight Poster">
+        <div class="movie-title">The Dark Knight</div>
+        <div class="movie-genre">Genre: Action, Crime</div>
+        <div class="movie-summary">Batman faces the Joker, a chaotic villain who pushes Gotham to the brink.</div>
+        <div class="movie-review"><strong>Review:</strong> A thrilling ride with one of the best performances by Heath Ledger.</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "name": "Alice Sharma",
+      "designation": "Software Engineer",
+      "department": "IT",
+      "salary": 70000,
+      "image": "https://i.pravatar.cc/150?img=1"
+    },
+    {
+      "id": 2,
+      "name": "Rahul Mehta",
+      "designation": "HR Manager",
+      "department": "HR",
+      "salary": 60000,
+      "image": "https://i.pravatar.cc/150?img=2"
+    },
+    {
+      "id": 3,
+      "name": "Sneha Patil",
+      "designation": "Marketing Lead",
+      "department": "Marketing",
+      "salary": 65000,
+      "image": "https://i.pravatar.cc/150?img=3"
+    }
+]
+  

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PICT</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <style>
+    .topper-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    .topper-img { height: 200px; object-fit: cover; }
+    #achievements { background-color: #f8f9fa; }
+    footer { background-color: #343a40; color: white; }
+    html {
+      scroll-padding-top: 70px; /* Add padding to account for fixed navbar */
+    }
+    section {
+      padding-top: 20px; /* Additional padding for sections */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">PICT</a>
+      <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#welcome">Welcome</a></li>
+          <li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="#toppers">Toppers</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-light py-4 text-center">
+    <h1 class="display-5">Pune Institute of Computer Technology</h1>
+    <p class="lead">Excellence in Engineering Education since 1983</p>
+  </header>
+
+  <!-- Welcome -->
+  <section id="welcome" class="py-4">
+    <div class="container text-center">
+      <h2 class="mb-4">Welcome to PICT</h2>
+      <p class="col-lg-8 mx-auto">Pune Institute of Computer Technology is a premier engineering institute established in 1983, consistently ranked among the top engineering colleges in the region.</p>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements" class="py-4">
+    <div class="container">
+      <h2 class="text-center mb-4">Our Achievements</h2>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+            <div class="card text-center h-100 card-body">
+              <h3>95%</h3>
+              <p>Placement Rate</p>
+            </div>  
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card text-center h-100 card-body">
+              <h3>120+</h3>
+              <p>Companies Visited</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card text-center h-100 card-body">
+              <h3>15 LPA</h3>
+              <p>Average Package</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toppers -->
+  <section id="toppers" class="py-4">
+    <div class="container">
+      <h2 class="text-center mb-4">Year-Wise Toppers</h2>
+      <div class="row">
+        <!-- 2023 -->
+        <div class="col-md-4 col-sm-6 col-12 mb-3">
+          <div class="card topper-card">
+            <img src="/api/placeholder/400/250" class="topper-img" alt="2023 Topper">
+            <div class="card-body">
+              <h5>Ananya Sharma</h5>
+              <p class="mb-1">Computer Engineering</p>
+              <p class="mb-1"><strong>Year:</strong> 2023</p>
+              <p class="mb-0"><strong>Percentage:</strong> 98.2%</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 2022 -->
+        <div class="col-md-4 col-sm-6 col-12 mb-3">
+          <div class="card topper-card">
+            <img src="/api/placeholder/400/250" class="topper-img" alt="2022 Topper">
+            <div class="card-body">
+              <h5>Rahul Patil</h5>
+              <p class="mb-1">Information Technology</p>
+              <p class="mb-1"><strong>Year:</strong> 2022</p>
+              <p class="mb-0"><strong>Percentage:</strong> 97.8%</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 2021 -->
+        <div class="col-md-4 col-sm-6 col-12 mb-3">
+          <div class="card topper-card">
+            <img src="/api/placeholder/400/250" class="topper-img" alt="2021 Topper">
+            <div class="card-body">
+              <h5>Priya Deshmukh</h5>
+              <p class="mb-1">Electronics Engineering</p>
+              <p class="mb-1"><strong>Year:</strong> 2021</p>
+              <p class="mb-0"><strong>Percentage:</strong> 96.5%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Pune Institute of Computer Technology</h5>
+          <p class="small">Bharati Vidyapeeth Campus, Dhankawadi, Pune, Maharashtra 411043<br>
+          Email: info@pict.edu | Phone: +91-20-24371101</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <h5>Connect With Us</h5>
+          <div class="mb-2">
+            <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+          </div>
+          <p class="small">© 2025 PICT. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="btn btn-primary position-fixed bottom-0 end-0 m-4">
+    ↑ Top
+  </button> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

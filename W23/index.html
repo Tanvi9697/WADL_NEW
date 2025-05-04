@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PICT Student Clubs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- jQuery Mobile -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <!-- Custom Styling -->
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+    }
+
+    .club-card {
+      background: #ffffff;
+      padding: 15px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .club-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .club-title {
+      font-size: 22px;
+      color: #0d47a1;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .club-description,
+    .club-achievements {
+      font-size: 15px;
+      color: #333;
+      margin: 5px 0;
+    }
+
+    .club-achievements strong {
+      color: #2e7d32;
+    }
+
+    .club-images {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .club-images img {
+      width: 48%;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .club-images img {
+        width: 100%;
+      }
+    }
+
+    h1 {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .ui-header {
+      background: #0d47a1 !important;
+      color: white !important;
+    }
+  </style>
+</head>
+<body>
+
+<div data-role="page" id="clubs">
+  <div data-role="header" data-theme="b">
+    <h1>PICT Student Clubs</h1>
+  </div>
+
+  <div data-role="content">
+
+    <!-- Coding Club -->
+    <div class="club-card">
+      <div class="club-title">💻 Coding Club</div>
+      <div class="club-description">A hub for coders and problem solvers to collaborate and compete in hackathons and contests.</div>
+      <div class="club-achievements"><strong>Achievements:</strong> Winners of Smart India Hackathon, organized multiple coding bootcamps.</div>
+      <div class="club-images">
+        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?fit=crop&w=600&q=80" alt="Coding Event">
+        <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?fit=crop&w=600&q=80" alt="Hackathon">
+      </div>
+    </div>
+
+    <!-- Robotics Club -->
+    <div class="club-card">
+      <div class="club-title">🤖 Robotics Club</div>
+      <div class="club-description">Where innovation meets engineering! Building bots and competing in national robotics challenges.</div>
+      <div class="club-achievements"><strong>Achievements:</strong> Qualified for e-Yantra finals, organized RoboWars at PICT.</div>
+      <div class="club-images">
+        <img src="https://images.unsplash.com/photo-1581091870622-3c0d7b5073c9?fit=crop&w=600&q=80" alt="Robotics 1">
+        <img src="https://images.unsplash.com/photo-1581091012184-7e0cdfbb679e?fit=crop&w=600&q=80" alt="Robotics 2">
+      </div>
+    </div>
+
+    <!-- Dance Club -->
+    <div class="club-card">
+      <div class="club-title">💃 Dance Club</div>
+      <div class="club-description">PICT’s energetic dance crew performing styles from classical to hip-hop in various events.</div>
+      <div class="club-achievements"><strong>Achievements:</strong> 1st prize at Mood Indigo, IIT Bombay. Annual cultural night performances.</div>
+      <div class="club-images">
+        <img src="https://images.unsplash.com/photo-1522770179533-24471fcdba45?fit=crop&w=600&q=80" alt="Dance 1">
+        <img src="https://images.unsplash.com/photo-1514516864644-8a107b382fa0?fit=crop&w=600&q=80" alt="Dance 2">
+      </div>
+    </div>
+
+    <!-- Photography Club -->
+    <div class="club-card">
+      <div class="club-title">📸 Photography Club</div>
+      <div class="club-description">Capturing the moments that matter. Covers all college events and hosts annual photo exhibitions.</div>
+      <div class="club-achievements"><strong>Achievements:</strong> Featured in local media, winners of “Frames 2024” intercollege competition.</div>
+      <div class="club-images">
+        <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?fit=crop&w=600&q=80" alt="Photography 1">
+        <img src="https://images.unsplash.com/photo-1558981285-6f0c94958bb6?fit=crop&w=600&q=80" alt="Photography 2">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

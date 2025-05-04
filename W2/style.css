@@ -1,0 +1,122 @@
+/* style.css */
+
+/* Importing Poppins font */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f6fa; /* Light background */
+    color: #2f3640; /* Dark text */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Navigation bar */
+nav {
+    background-color: #2f3640;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav h2 {
+    color: white;
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to right, #74ebd5, #acb6e5); /* Attractive gradient */
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+/* .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+} */
+/* Card sections */
+.card {
+    background: white;
+    margin: 30px auto;
+    padding: 30px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+/* On hover, slight zoom */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Skills buttons */
+.skills span {
+    display: inline-block;
+    background: dodgerblue;
+    color: white;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+/* List styling */
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+#social a {
+    color: #2f3640;
+    margin: 10px;
+    font-size: 1em;
+}
+
+#social a:hover {
+    color: dodgerblue;
+}
+
+/* Footer */
+footer {
+    background: #2f3640;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+/* form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-family: inherit;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+} */
+

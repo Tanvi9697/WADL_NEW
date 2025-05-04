@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Catalog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Product Catalog</h1>
+
+  <table id="productTable">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody id="tablebody">
+
+    </tbody>
+  </table>
+
+  <div class="pagination">
+    <button onclick="prevpage()">Previous</button>
+    <span id="pageinfo"></span>
+    <button onclick="nextpage()"></button>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
+<!-- Add a "View More" button:
+
+let visibleProducts = 5;
+function loadMoreProducts() {
+  visibleProducts += 5;
+  displayProduct();
+}
+
+Implement Search Functionality:
+
+<input type="text" id="searchInput" placeholder="Search Products..." onkeyup="searchProducts()">
+
+function searchProducts() {
+  const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+  const filteredProducts = products.filter(product => product.name.toLowerCase().includes(searchTerm));
+  displayProduct(filteredProducts);
+} -->

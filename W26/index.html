@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PICT B.E. Course Structure</title>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <style>
+    .ui-header h1 {
+      color: #ffffff;
+      text-shadow: none;
+    }
+    .ui-page-theme-a .ui-header {
+      background-color: #00796B;
+      border-color: #004D40;
+    }
+    .ui-collapsible-heading .ui-btn {
+      background-color: #E0F2F1;
+      color: #004D40;
+      font-weight: bold;
+    }
+    .subject-desc {
+      font-size: 14px;
+      color: #555;
+      margin-top: 4px;
+    }
+    .ui-listview li {
+      padding: 10px 15px;
+    }
+  </style>
+</head>
+<body>
+
+<div data-role="page" id="home" data-theme="a">
+  <div data-role="header">
+    <h1>📘 PICT B.E. Course Structure</h1>
+  </div>
+
+  <div role="main" class="ui-content">
+    <div data-role="collapsible-set">
+
+      <div data-role="collapsible">
+        <h3>🧮 First Year (FE)</h3>
+        <ul data-role="listview">
+          <li><b>EM-I</b> - Engineering Mathematics I
+            <div class="subject-desc">Covers calculus, differential equations, and linear algebra.</div>
+          </li>
+          <li><b>EP</b> - Engineering Physics
+            <div class="subject-desc">Basics of mechanics, optics, and quantum theory.</div>
+          </li>
+          <li><b>EC</b> - Engineering Chemistry
+            <div class="subject-desc">Focuses on materials science, chemical bonding, and electrochemistry.</div>
+          </li>
+          <li><b>BEE</b> - Basic Electrical Engineering
+            <div class="subject-desc">Introduces circuits, current, voltage, and transformers.</div>
+          </li>
+        </ul>
+      </div>
+
+      <div data-role="collapsible">
+        <h3>💻 Second Year (SE)</h3>
+        <ul data-role="listview">
+          <li><b>DSA</b> - Data Structures & Algorithms
+            <div class="subject-desc">Study of arrays, linked lists, stacks, queues, trees, and graphs.</div>
+          </li>
+          <li><b>OOP</b> - Object-Oriented Programming
+            <div class="subject-desc">C++/Java programming with classes, objects, inheritance, and polymorphism.</div>
+          </li>
+          <li><b>LDCO</b> - Logic Design & Computer Organization
+            <div class="subject-desc">Digital logic, memory hierarchy, CPU design.</div>
+          </li>
+        </ul>
+      </div>
+
+      <div data-role="collapsible">
+        <h3>🖥️ Third Year (TE)</h3>
+        <ul data-role="listview">
+          <li><b>DBMS</b> - Database Management Systems
+            <div class="subject-desc">SQL, normalization, transactions, and indexing.</div>
+          </li>
+          <li><b>CN</b> - Computer Networks
+            <div class="subject-desc">Networking models, protocols, IP addressing, and routing.</div>
+          </li>
+          <li><b>OS</b> - Operating Systems
+            <div class="subject-desc">Processes, threads, memory and file management.</div>
+          </li>
+        </ul>
+      </div>
+
+      <div data-role="collapsible">
+        <h3>🤖 Final Year (BE)</h3>
+        <ul data-role="listview">
+          <li><b>AI</b> - Artificial Intelligence
+            <div class="subject-desc">Problem-solving, search algorithms, and basic ML techniques.</div>
+          </li>
+          <li><b>ML</b> - Machine Learning
+            <div class="subject-desc">Supervised, unsupervised learning and real-world applications.</div>
+          </li>
+          <li><b>CS</b> - Cyber Security
+            <div class="subject-desc">Network security, cryptography, ethical hacking basics.</div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

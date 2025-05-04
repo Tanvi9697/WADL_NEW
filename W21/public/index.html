@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookstore</title>
+</head>
+<body>
+  <h1>Books</h1>
+  <form id="bookForm">
+    <input type="hidden" name="id" />
+    <input type="text" name="title" placeholder="Title" required />
+    <input type="text" name="author" placeholder="Author" required />
+    <input type="number" name="price" placeholder="Price" required />
+    <input type="text" name="genre" placeholder="Genre" required />
+    <button type="submit">Add/Update Book</button>
+  </form>
+
+  <h2>Book List</h2>
+  <table id="bookTable" border="1"></table>
+
+  <script>
+    async function loadBooks() {
+  const res = await fetch('/api/books');
+  const books = await res.json();
+  const table = document.getElementById('bookTable');
+  
+  table.innerHTML = `
+    <tr>
+      <th>Title</th><th>Author</th><th>Price</th><th>Genre</th><th>Actions</th>
+    </tr>`;
+
+  books.forEach(b => {
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${b.title}</td>
+      <td>${b.author}</td>
+      <td>${b.price}</td>
+      <td>${b.genre}</td>
+      <td>
+        <button onclick="editBook('${b._id}', \`${b.title}\`, \`${b.author}\`, ${b.price}, \`${b.genre}\`)">Edit</button>
+        <button onclick="deleteBook('${b._id}')">Delete</button>
+      </td>
+    `;
+    table.appendChild(row);
+  });
+}
+
+    document.getElementById('bookForm').onsubmit = async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const book = {
+        title: form.title.value,
+        author: form.author.value,
+        price: form.price.value,
+        genre: form.genre.value
+      };
+
+      const id = form.id.value;
+      if (id) {
+        // Update existing book
+        await fetch(`/api/books/${id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(book)
+        });
+      } else {
+        // Add new book
+        await fetch('/api/books', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(book)
+        });
+      }
+
+      form.reset();
+      form.id.value = '';
+      loadBooks();
+    };
+
+    function editBook(id, title, author, price, genre) {
+      const form = document.getElementById('bookForm');
+      form.id.value = id;
+      form.title.value = title;
+      form.author.value = author;
+      form.price.value = price;
+      form.genre.value = genre;
+    }
+
+    async function deleteBook(id) {
+      await fetch(`/api/books/${id}`, { method: 'DELETE' });
+      loadBooks();
+    }
+
+    window.onload = loadBooks;
+  </script>
+</body>
+</html>
