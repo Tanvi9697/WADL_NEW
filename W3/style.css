@@ -1,0 +1,108 @@
+/* style.css */
+
+/* Applying a clean and modern font */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f8ff; /* Light blue background */
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+    background: #ff7043; /* Orange background */
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    background: url('DSC_8367-Edit-W.webp') no-repeat center center;
+    background-size: cover;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.5em;
+}
+
+nav {
+    background-color: #2f3640;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav h2 {
+    color: white;
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Section cards */
+.card {
+    background: white;
+    margin: 30px auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Lists */
+ol, ul {
+    padding-left: 20px;
+    font-size: 1.1em;
+}
+
+/* Menu Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+}
+
+th {
+    background-color: #ff7043;
+    color: white;
+}
+
+/* Dish Images */
+img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}

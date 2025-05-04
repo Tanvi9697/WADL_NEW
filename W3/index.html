@@ -1,0 +1,106 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ABC Delights - Restaurant Menu</title>
+    <link rel="stylesheet" href="style.css"> <!-- Linking the CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"> <!-- Nice font -->
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+            <a href="#top-dishes" >Top Dishes</a>
+            <a href="#menu">Menu</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    
+    <!-- Header Section -->
+    <header>
+        <h1>ABC Delights</h1>
+        <p>Welcome to ABC Delights</p>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="intro card">
+        <h2>About Us</h2>
+        <p>At ABC Delights, we serve happiness on your plate. Our chefs pour their passion into every dish to bring you the finest cuisines with the best ingredients. Quality and taste are our promises!</p>
+    </section>
+
+    <section class="card">
+        <h2>Chef's Message</h2>
+        <p>“Food is not just fuel; it’s an experience. At ABC Delights, we ensure every dish brings a smile.”</p>
+    </section>
+    
+    <!-- Top Dishes -->
+    <section class="card" id="top-dishes">
+        <h2>Top Dishes</h2>
+        <ol>
+            <li>Paneer Tikka</li>
+            <li>Biryani</li>
+            <li>Spring Rolls</li>
+        </ol>
+    </section>
+
+    <!-- Available Cuisines -->
+    <section class="card">
+        <h2>Available Cuisines</h2>
+        <ul>
+            <li>Italian</li>
+            <li>Indian</li>
+            <li>Chinese</li>
+        </ul>
+    </section>
+
+    <!-- Menu Table -->
+    <section class="card" id="menu">
+        <h2>Our Menu</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Dish Image</th>
+                    <th>Dish Name</th>
+                    <th>Description</th>
+                    <th>Price (INR ₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg" alt="Paneer Tikka"></td>
+                    <td>Paneer Tikka</td>
+                    <td>Spicy grilled cottage cheese cubes with veggies.</td>
+                    <td>₹250</td>
+                </tr>
+                <tr>
+                    <td><img src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg" alt="Biryani"></td>
+                    <td>Biryani</td>
+                    <td>Fragrant rice cooked with aromatic spices and meat or veggies.</td>
+                    <td>₹350</td>
+                </tr>
+                <tr>
+                    <td><img src="https://m.media-amazon.com/images/I/71niXI3lxlL._AC_SY679_.jpg" alt="Spring Rolls"></td>
+                    <td>Spring Rolls</td>
+                    <td>Crunchy rolls stuffed with mixed vegetables and sauces.</td>
+                    <td>₹180</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="card" id="contact">
+        <h2>Feedback</h2>
+        <form>
+            <label>Your Name: <input type="text" name="name"></label><br><br>
+            <label>Your Feedback:<br><textarea rows="4" cols="50"></textarea></label><br><br>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 ABC Delights | Taste the Happiness!</p>
+    </footer>
+
+</body>
+</html>
