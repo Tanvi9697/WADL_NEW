@@ -9,7 +9,9 @@ body {
     color: #2f3640; /* Dark text */
     scroll-behavior: smooth; /* Smooth scrolling */
 }
-
+html {
+    scroll-padding-top: 80px; /* Adjust this to match your navbar height */
+  }
 /* Navigation bar */
 nav {
     background-color: #2f3640;
