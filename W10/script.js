@@ -3,35 +3,53 @@ let tasks = [];
 window.onload = loadTasks;
 
 function loadTasks() {
-  fetch('task.json')
-    .then(res => res.json())
-    .then(data => {
-      tasks = data;
-      showTasks();
-    });
+  const savedTasks = localStorage.getItem('tasks');
+  tasks = savedTasks ? JSON.parse(savedTasks) : [];
+  showTasks();
 }
 
 function showTasks() {
-  document.getElementById("taskList").innerHTML = tasks.map((t, i) =>
-    `<li>${t} 
-      <button onclick="editTask(${i})">Edit</button> 
+  const list = document.getElementById("taskList");
+  list.innerHTML = tasks.map((t, i) => `
+    <li id="task-${i}">
+      <span>${t}</span>
+      <button onclick="startEditTask(${i})">Edit</button>
       <button onclick="deleteTask(${i})">Delete</button>
-    </li>`
-  ).join('');
+    </li>
+  `).join('');
 }
 
 function addTask() {
   const input = document.getElementById("taskInput");
-  if (!input.value) return;
-  tasks.push(input.value);
+  if (!input.value.trim()) return;
+  tasks.push(input.value.trim());
   input.value = "";
   saveTasks();
 }
 
-function editTask(i) {
-  const updated = prompt("Update Task:", tasks[i]);
-  if (updated) tasks[i] = updated;
-  saveTasks();
+function startEditTask(i) {
+  const li = document.getElementById(`task-${i}`);
+  const originalText = tasks[i];
+
+  li.innerHTML = `
+    <input type="text" id="editInput-${i}" value="${originalText}">
+    <button onclick="confirmEditTask(${i})">Save</button>
+    <button onclick="cancelEditTask(${i})">Cancel</button>
+  `;
+}
+
+function confirmEditTask(i) {
+  const newValue = document.getElementById(`editInput-${i}`).value.trim();
+  if (newValue) {
+    tasks[i] = newValue;
+    saveTasks();
+  } else {
+    cancelEditTask(i);
+  }
+}
+
+function cancelEditTask(i) {
+  showTasks(); // reloads the list from `tasks` array
 }
 
 function deleteTask(i) {
@@ -40,10 +58,6 @@ function deleteTask(i) {
 }
 
 function saveTasks() {
-  fetch('task.json', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(tasks)
-  });
+  localStorage.setItem('tasks', JSON.stringify(tasks));
   showTasks();
 }
