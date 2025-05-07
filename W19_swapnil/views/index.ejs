@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+        h2 { color: #2c3e50; }
+        table { border-collapse: collapse; width: 90%; margin: 20px auto; }
+        th, td { border: 1px solid #aaa; padding: 8px; text-align: center; }
+        th { background-color: #f2f2f2; }
+        a { color: #e50914; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .nav { margin: 20px 0; }
+        .nav a { margin: 0 10px; }
+        form { margin: 20px 0; }
+        input[type="text"] { padding: 5px; }
+        button { padding: 5px 10px; background-color: #3498db; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #2980b9; }
+        @media (max-width: 600px) {
+            table { width: 100%; font-size: 14px; }
+            th, td { padding: 5px; }
+        }
+    </style>
+</head>
+<body>
+    <h2><%= filter %> (Total: <%= total %>)</h2>
+    <div class="nav">
+        <a href="/">All Students</a> |
+        <a href="/dsbda">DSBDA > 20</a> |
+        <a href="/less">WAD & DSBDA < 40</a> |
+        <a href="/all">All Subjects > 25</a>
+    </div>
+    <form action="/update" method="POST">
+        <input type="text" name="name" placeholder="Enter student name to update marks" required>
+        <button type="submit">Update Marks (+10)</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll No</th>
+                <th>WAD</th>
+                <th>DSBDA</th>
+                <th>CNS</th>
+                <th>CC</th>
+                <th>AI</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% student.forEach(s => { %>
+                <tr>
+                    <td><%= s.Name %></td>
+                    <td><%= s.Roll_No %></td>
+                    <td><%= s.WAD_Marks %></td>
+                    <td><%= s.DSBDA_Marks %></td>
+                    <td><%= s.CNS_Marks %></td>
+                    <td><%= s.CC_Marks %></td>
+                    <td><%= s.AI_Marks %></td>
+                    <td><a href="/delete/<%= s.Name %>">Delete</a></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
